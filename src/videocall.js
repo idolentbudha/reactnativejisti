@@ -5,6 +5,7 @@ import JitsiMeet, {JitsiMeetView} from 'react-native-jitsi-meet';
 const VideoCall = () => {
   const onConferenceTerminated = nativeEvent => {
     /* Conference terminated event */
+    alert('terminated');
   };
 
   const onConferenceJoined = nativeEvent => {
@@ -66,7 +67,7 @@ const VideoCall = () => {
         onConferenceTerminated={onConferenceTerminated}
         onConferenceJoined={onConferenceJoined}
         onConferenceWillJoin={onConferenceWillJoin}
-        style={{height: '50%', width: '100%'}}
+        style={{height: '100%', width: '100%'}}
       />
     </View>
   );
